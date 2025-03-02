@@ -3,8 +3,6 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Windowing;
-using Windows.Win32.Foundation;
-using Windows.Win32.UI.WindowsAndMessaging;
 
 namespace UnityPrototype
 {
@@ -23,16 +21,16 @@ namespace UnityPrototype
 
         private void StartUnity()
         {
-            _unityProcess = new Process();
-            _unityProcess.StartInfo.FileName = "PathToYourUnityBuild.exe";
-            _unityProcess.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
-            _unityProcess.Start();
-            _unityProcess.WaitForInputIdle();
+            //_unityProcess = new Process();
+            //_unityProcess.StartInfo.FileName = "PathToYourUnityBuild.exe";
+            //_unityProcess.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
+            //_unityProcess.Start();
+            //_unityProcess.WaitForInputIdle();
 
-            IntPtr unityHwnd = _unityProcess.MainWindowHandle;
-            IntPtr mauiHwnd = WinRT.Interop.WindowNative.GetWindowHandle(MainWindow.Instance);
+            //IntPtr unityHwnd = _unityProcess.MainWindowHandle;
+            var mauiHwnd = ((MauiWinUIWindow)App.Current.Windows[0].Handler.PlatformView).WindowHandle;
 
-            SetParent(unityHwnd, mauiHwnd);
+            //SetParent(unityHwnd, mauiHwnd);
         }
     }
 }

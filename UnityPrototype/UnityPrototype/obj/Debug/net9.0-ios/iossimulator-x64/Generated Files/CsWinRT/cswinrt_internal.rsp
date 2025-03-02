@@ -1,0 +1,7 @@
+-target net8.0
+-input 18.1
+-input 
+-output "C:\JuniorYear\Capstone\UnityMAUIPrototype\UnityPrototype\UnityPrototype\obj\Debug\net9.0-ios\iossimulator-x64\Generated Files\CsWinRT"
+
+-exclude Windows
+-exclude Microsoft

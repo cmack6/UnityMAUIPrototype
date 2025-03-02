@@ -1,0 +1,7 @@
+-target net8.0
+-input 35.0
+-input 
+-output "C:\JuniorYear\Capstone\UnityMAUIPrototype\UnityPrototype\UnityPrototype\obj\Debug\net9.0-android\Generated Files\CsWinRT"
+
+-exclude Windows
+-exclude Microsoft
