@@ -3,8 +3,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Windowing;
-using Windows.Win32.Foundation;
-using Windows.Win32.UI.WindowsAndMessaging;
+using WinRT.Interop;
 
 namespace UnityPrototype
 {
@@ -18,7 +17,7 @@ namespace UnityPrototype
         public MainPage()
         {
             InitializeComponent();
-            StartUnity();
+            //StartUnity();
         }
 
         private void StartUnity()
@@ -30,9 +29,10 @@ namespace UnityPrototype
             _unityProcess.WaitForInputIdle();
 
             IntPtr unityHwnd = _unityProcess.MainWindowHandle;
-            IntPtr mauiHwnd = WinRT.Interop.WindowNative.GetWindowHandle(MainWindow.Instance);
+            var mauiWindow = Microsoft.Maui.Controls.Application.Current.Windows[0].Handler.PlatformView;
+            IntPtr hWnd = WindowNative.GetWindowHandle(mauiWindow);
 
-            SetParent(unityHwnd, mauiHwnd);
+            SetParent(unityHwnd, hWnd);
         }
     }
 }
