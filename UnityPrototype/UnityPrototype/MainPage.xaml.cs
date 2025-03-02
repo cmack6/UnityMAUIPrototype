@@ -1,38 +1,27 @@
-﻿using System;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using Microsoft.UI.Xaml;
-using Microsoft.UI.Windowing;
-using WinRT.Interop;
+﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls.Xaml;
 
 namespace UnityPrototype
 {
     public partial class MainPage : ContentPage
     {
-        [DllImport("user32.dll")]
-        private static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
-
-        private Process _unityProcess;
-
         public MainPage()
         {
             InitializeComponent();
-            //StartUnity();
-        }
 
-        private void StartUnity()
-        {
-            _unityProcess = new Process();
-            _unityProcess.StartInfo.FileName = "PathToYourUnityBuild.exe";
-            _unityProcess.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
-            _unityProcess.Start();
-            _unityProcess.WaitForInputIdle();
+            
+            // Create a WebView to display Unity WebGL content
+            var webView = new WebView
+            {
+                Source = new UrlWebViewSource
+                {
+                    Url = "ms-appx-web:///Resources/UnityWebGL/index.html"  // Path to the HTML file
+                }
+            };
 
-            IntPtr unityHwnd = _unityProcess.MainWindowHandle;
-            var mauiWindow = Microsoft.Maui.Controls.Application.Current.Windows[0].Handler.PlatformView;
-            IntPtr hWnd = WindowNative.GetWindowHandle(mauiWindow);
-
-            SetParent(unityHwnd, hWnd);
+            // Add the WebView to the page content
+            Content = webView;
         }
     }
 }
+

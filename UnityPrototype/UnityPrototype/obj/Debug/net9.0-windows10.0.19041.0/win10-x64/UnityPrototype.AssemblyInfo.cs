@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnityPrototype")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+a1ddca46b365d2e36098163aa4c9d3ea1d73e395")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+892237895a0f908e9559622990ea2af004f32791")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnityPrototype")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnityPrototype")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
