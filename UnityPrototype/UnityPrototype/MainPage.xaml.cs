@@ -16,21 +16,19 @@ namespace UnityPrototype
         public MainPage()
         {
             InitializeComponent();
-            StartUnity();
         }
 
-        private void StartUnity()
+        void StartUnity(object sender, EventArgs args)
         {
-            //_unityProcess = new Process();
-            //_unityProcess.StartInfo.FileName = "PathToYourUnityBuild.exe";
-            //_unityProcess.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
-            //_unityProcess.Start();
-            //_unityProcess.WaitForInputIdle();
+            _unityProcess = new Process();
+            _unityProcess.StartInfo.FileName = @"C:\Users\wolfm\OneDrive\Documents\GitHub\UnityMAUIPrototype\Exe\ExampleWithServer.exe";
+            _unityProcess.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
+            _unityProcess.Start();
+            _unityProcess.WaitForInputIdle();
 
-            //IntPtr unityHwnd = _unityProcess.MainWindowHandle;
+            IntPtr unityHwnd = _unityProcess.MainWindowHandle;
             var mauiHwnd = ((MauiWinUIWindow)App.Current.Windows[0].Handler.PlatformView).WindowHandle;
-
-            //SetParent(unityHwnd, mauiHwnd);
+            SetParent(unityHwnd, mauiHwnd);
         }
     }
 }

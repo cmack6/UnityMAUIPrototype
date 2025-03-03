@@ -26,8 +26,9 @@
 
             <Button
                 x:Name="CounterBtn"
-                Text="Click me" 
+                Text="Unity Game" 
                 SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="StartUnity"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>

@@ -6446,24 +6446,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\raven\\.nuget\\packages\\": {},
+    "C:\\Users\\wolfm\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\JuniorYear\\Capstone\\UnityMAUIPrototype\\UnityPrototype\\UnityPrototype\\UnityPrototype.csproj",
+      "projectUniqueName": "C:\\Users\\wolfm\\OneDrive\\Documents\\GitHub\\UnityMAUIPrototype\\UnityPrototype\\UnityPrototype\\UnityPrototype.csproj",
       "projectName": "UnityPrototype",
-      "projectPath": "C:\\JuniorYear\\Capstone\\UnityMAUIPrototype\\UnityPrototype\\UnityPrototype\\UnityPrototype.csproj",
-      "packagesPath": "C:\\Users\\raven\\.nuget\\packages\\",
-      "outputPath": "C:\\JuniorYear\\Capstone\\UnityMAUIPrototype\\UnityPrototype\\UnityPrototype\\obj\\",
+      "projectPath": "C:\\Users\\wolfm\\OneDrive\\Documents\\GitHub\\UnityMAUIPrototype\\UnityPrototype\\UnityPrototype\\UnityPrototype.csproj",
+      "packagesPath": "C:\\Users\\wolfm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wolfm\\OneDrive\\Documents\\GitHub\\UnityMAUIPrototype\\UnityPrototype\\UnityPrototype\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\raven\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wolfm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
